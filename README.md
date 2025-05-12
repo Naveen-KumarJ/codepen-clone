@@ -1,4 +1,4 @@
-# CodePen Clone 🖋️
+# CodePen Clone 🖥️
 
 A fully functional CodePen clone built using **React**, **React Router**, and **Firebase Authentication**. This web-based front-end playground allows developers to code in HTML, CSS, and JavaScript and instantly preview the output.
 
@@ -67,5 +67,4 @@ A fully functional CodePen clone built using **React**, **React Router**, and **
 ---
 
 ## ✨ Author
-   Naveen Kumar J
-   GitHub: @Naveen-KumarJ
+Naveen Kumar J | GitHub: @Naveen-KumarJ
