@@ -14,10 +14,7 @@ A fully functional CodePen clone built using **React**, **React Router**, and **
 ---
 
 ## 🖼️ Live Preview
-
-![Editor Screenshot](./screenshots/landing_page.png)
-
-> 📌 *Note: Add the screenshot in the `screenshots` folder and name it `editor.png`.*
+[Click here !](https://codepen-clone-puce.vercel.app/)
 
 ---
 
@@ -32,9 +29,43 @@ A fully functional CodePen clone built using **React**, **React Router**, and **
 
 ---
 
-## 🔧 Installation
+## 📁 Project Structure
 
-1. Clone the repo:
-   ```bash
-   git clone https://github.com/your-username/codepen-clone.git
-   cd codepen-clone
+```
+📦 codepen-clone
+┣ 📁 components/
+┃ ┗ 📁 editor/
+┃   ┗ EditorPane.jsx
+┣ 📁 context/
+┃ ┗ AuthContext.js
+┣ 📁 layouts/
+┃ ┗ MainLayout.jsx
+┣ 📁 pages/
+┃ ┣ Home.jsx
+┃ ┣ Login.jsx
+┃ ┣ Signup.jsx
+┃ ┗ Editor.jsx
+┣ 📁 routes/
+┃ ┗ ProtectedRoutes.jsx
+┣ 📁 assets/
+┃ ┗ codepen_logo.svg
+┣ 📁 screenshots/
+┃ ┗ editor.png
+┣ App.jsx
+┣ main.jsx
+┣ tailwind.config.js
+┗ vite.config.js
+
+```
+
+---
+
+## 🔐 Protected Routes
+ - The /editor route is protected using ProtectedRoutes.jsx.
+ - Unauthenticated users are redirected to the login page.
+
+---
+
+## ✨ Author
+   Naveen Kumar J
+   GitHub: @Naveen-KumarJ
