@@ -1,12 +1,40 @@
-# React + Vite
+# CodePen Clone 🖋️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully functional CodePen clone built using **React**, **React Router**, and **Firebase Authentication**. This web-based front-end playground allows developers to code in HTML, CSS, and JavaScript and instantly preview the output.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🔐 User Authentication (Email, Google, GitHub)
+- ⚙️ Protected Editor Routes
+- 💻 Real-Time Code Preview (HTML, CSS, JS)
+- 📱 Responsive Layout (Editor best on desktop)
+- 🎨 Code Editor Panes with Icons (HTML, CSS, JS)
+- ⚠️ Small screen warning for better UX
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🖼️ Live Preview
+
+![Editor Screenshot](./screenshots/landing_page.png)
+
+> 📌 *Note: Add the screenshot in the `screenshots` folder and name it `editor.png`.*
+
+---
+
+## 🛠️ Tech Stack
+
+- React
+- React Router
+- Firebase Auth
+- React Icons
+- SplitPane
+- Tailwind CSS
+
+---
+
+## 🔧 Installation
+
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/your-username/codepen-clone.git
+   cd codepen-clone
