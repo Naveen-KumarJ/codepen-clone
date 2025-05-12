@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
+import Split from "react-split";
 import { FaHtml5, FaCss3Alt, FaJs } from "react-icons/fa";
-import SplitPane from "react-split-pane";
 import EditorPane from "../components/editor/EditorPane";
 
 const Editor = () => {
@@ -8,7 +8,7 @@ const Editor = () => {
   const [css, setCss] = useState("");
   const [js, setJs] = useState("");
   const [srcDoc, setSrcDoc] = useState("");
-  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1024); // lg breakpoint
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth < 1024);
 
   useEffect(() => {
     const handleResize = () => {
@@ -47,8 +47,20 @@ const Editor = () => {
   return (
     <div className="h-screen w-screen bg-black text-white flex flex-col">
       <div className="flex-1">
-        <SplitPane split="horizontal" defaultSize="40%" minSize={100}>
-          <SplitPane split="vertical" defaultSize="33%" minSize={200}>
+        <Split
+          className="flex flex-col h-full"
+          direction="vertical"
+          sizes={[50, 50]}
+          minSize={100}
+          gutterSize={8}
+        >
+          <Split
+            className="flex flex-row h-full"
+            direction="horizontal"
+            sizes={[33, 33, 34]}
+            minSize={200}
+            gutterSize={8}
+          >
             <EditorPane
               icon={<FaHtml5 className="text-xl text-red-500" />}
               label="HTML"
@@ -57,38 +69,37 @@ const Editor = () => {
               value={html}
               onChange={setHtml}
             />
-            <SplitPane split="vertical" defaultSize="50%" minSize={200}>
-              <EditorPane
-                icon={<FaCss3Alt className="text-xl text-blue-500" />}
-                label="CSS"
-                iconColor="border-t-blue-500"
-                language="css"
-                value={css}
-                onChange={setCss}
-              />
-              <EditorPane
-                icon={<FaJs className="text-xl text-yellow-400" />}
-                label="JavaScript"
-                iconColor="border-t-yellow-400"
-                language="js"
-                value={js}
-                onChange={setJs}
-              />
-            </SplitPane>
-          </SplitPane>
-          <div className="bg-zinc-800 p-4 text-white h-full">
+            <EditorPane
+              icon={<FaCss3Alt className="text-xl text-blue-500" />}
+              label="CSS"
+              iconColor="border-t-blue-500"
+              language="css"
+              value={css}
+              onChange={setCss}
+            />
+            <EditorPane
+              icon={<FaJs className="text-xl text-yellow-400" />}
+              label="JavaScript"
+              iconColor="border-t-yellow-400"
+              language="js"
+              value={js}
+              onChange={setJs}
+            />
+          </Split>
+
+          <div className="bg-zinc-800 p-4 text-white h-full overflow-hidden">
             <h2 className="text-lg font-semibold mb-2">Output</h2>
             <div className="bg-white w-full h-full text-black rounded-md overflow-hidden">
               <iframe
                 srcDoc={srcDoc}
                 title="output"
                 sandbox="allow-scripts"
-                height="100%"
                 width="100%"
+                height="100%"
               />
             </div>
           </div>
-        </SplitPane>
+        </Split>
       </div>
     </div>
   );
